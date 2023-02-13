@@ -29,6 +29,8 @@ sort interger by castin ipv4 to Int.
 
 # uci dhcp sample 
 
+Modifying uci dhcp.hosts samples.
+
 
 ```sh
 
