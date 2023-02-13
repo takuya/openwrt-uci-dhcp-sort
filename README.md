@@ -64,7 +64,7 @@ if you are using ruby or python or JavaScript(node), you can rewrie via ssh.
 
 ### sample
 
-If you want to write sort script in your favorite language. you can do like this.
+In your favorite language. you can do like this.
 
 JS/python
 ```
