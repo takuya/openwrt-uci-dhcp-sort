@@ -16,12 +16,12 @@ lua uci-sort-dhcp-hosts.lua
 
 # what does this script do.
 
-- Backup dhcp.@host to /tmp
-- uci show dhcp and eval dhcp.@host to lua
-- sort dhcp.hosts by ip addr 
-- remove exists by `uci del dhcp.host..`
-- add sorted by `uci add dhcp.host `
-- and commit `uci commit dhcp`
+- Backup dhcp.@host to /tmp.
+- Get list `uci show dhcp` and eval dhcp.@host to lua.
+- Sort dhcp.hosts by ip addr.
+- Remove all exists by `uci del dhcp.host..`.
+- Add sorted by `uci add dhcp.host `.
+- And commit by executing `uci commit dhcp`.
 
 # how to sort ip address 
 
