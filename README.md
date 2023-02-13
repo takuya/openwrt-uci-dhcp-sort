@@ -1,6 +1,6 @@
-# openwrt-uci-dhcp-sort ipv4
+# openwrt / sort uci static DHCP v4 lease.
 
-Sort openwrt dhcp hosts ipv4
+Sort openwrt dhcp-static-lease-hosts.
 
 No v6 available.
 if you uci have a v6 static lease dhcp , this script will disrupt uci.
