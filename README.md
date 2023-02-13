@@ -3,12 +3,14 @@
 Sort openwrt dhcp-static-lease-hosts.
 
 No v6 available.
-if you uci have a v6 static lease dhcp , this script will disrupt uci.
+if your uci have a v6 static lease dhcp , this script will disrupt dhcp.host.
 
 # how to use 
 
 Copy file into OpenWrt.  Run by Lua
 
+### command
+ssh into wrt do this
 ```
 lua uci-sort-dhcp-hosts.lua
 ```
