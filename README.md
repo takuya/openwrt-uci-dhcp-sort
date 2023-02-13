@@ -27,7 +27,7 @@ lua uci-sort-dhcp-hosts.lua
 
 # how to sort ip address 
 
-sort interger by castin ipv4 to Int.
+Sort ip as interger by casting ipv4 to Int.
 
 # uci dhcp sample 
 
@@ -63,8 +63,19 @@ uci set dhcp.@host[-1].name='raspi-ubuntu'
 if you are using ruby or python or JavaScript(node), you can rewrie via ssh.
 
 ### sample
+
+If you want to write sort script in your favorite language. you can do like this.
+
+JS/python
 ```
 ssh root@192.168.1.1 'uci show dhcp' \
-  | \grep dhcp.@host | sed -E 's/@//' | sed -E 's/=host/={}/' >> dhcp.rb
-
+  | \grep dhcp.@host | sed -E 's/@//' | sed -E 's/=host/={}/' >> dhcp.js
 ```
+
+ruby
+```
+ssh root@192.168.1.1 'uci show dhcp' \
+  | \grep dhcp.@host | sed -E 's/@//' | sed -E 's/=host/=OpenStruct.new/' >> dhcp.rb
+```
+
+
