@@ -81,8 +81,10 @@ function gen_uci_dhcp_add_cmd(dhcp)
     cmd  = cmd..string.format("# No.%03d \n", i)
     cmd  = cmd.."uci add dhcp host\n"
     cmd  = cmd..string.format("uci set dhcp.@host[-1].dns='%s'\n", e.dns  )
-    cmd  = cmd..string.format("uci set dhcp.@host[-1].mac='%s'\n", e.mac )
     cmd  = cmd..string.format("uci set dhcp.@host[-1].ip='%s'\n",  e.ip  )
+    if e.mac then
+      cmd  = cmd..string.format("uci set dhcp.@host[-1].mac='%s'\n", e.mac )
+    end
     if  e.leasetime then
       cmd  = cmd..string.format("uci set dhcp.@host[-1].leasetime='%s'\n", e.leasetime  )
     end
